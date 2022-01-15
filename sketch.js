@@ -29,7 +29,7 @@ function setup() {
 function draw() {
   background(255);
   textSize(23);
-  text("Score: " + score,30,40);
+  text("Puntuación: " + score,30,40);
   
     ground.velocityX = 6;
   
@@ -41,7 +41,7 @@ function draw() {
     spawnBones();
     if(bonesGroup.isTouching(dog)){
     textSize(25);
-    text("Bone eaten :) ", 350,40);
+    text("Se come un hueso :)", 350,40);
     score=score +2;
     }
   
@@ -49,14 +49,14 @@ function draw() {
 }
 
 function spawnBones() {
-  //write code here to spawn the bones
+  // Escribe código aquí para generar los huesos
   if (frameCount % 90 === 0) {
     bone = createSprite(30,160,40,10);
     bone.addImage(boneImg);
     bone.scale =0.1 ;
     bone.velocityX = 3;
     
-     //assign lifetime to the variable
+     // Asigna tiempo de vida a la variable
     bone.lifetime = 155;
     
     bonesGroup.add(bone);
